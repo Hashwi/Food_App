@@ -21,12 +21,12 @@ useEffect(() => {
   }
   setBtnIsHighlighted(true)
 
-  setTimeout(() => {
-    clearTimeout(timer)
+  const timer = setTimeout(() => {
+    setBtnIsHighlighted(false)
   }, 300)
 
   return () => {
-
+    clearTimeout(timer)
   }
 }, [items])
 
